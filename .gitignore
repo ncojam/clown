@@ -28,6 +28,7 @@ wheels/
 !config.json  # Но конфиг коммитим
 !requirements.txt
 !.gitignore
+!phrases.json
 
 # Файлы окружения
 .env
