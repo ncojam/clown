@@ -2,6 +2,9 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
+# Переменная окружения для папки данных
+ENV DATA_DIR=/app/data
+
 # Зависимости
 RUN pip install --no-cache-dir pyTelegramBotAPI python-dotenv
 
