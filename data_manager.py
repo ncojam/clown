@@ -2,7 +2,7 @@ import json
 import os
 import logging
 
-# Папка для данных
+APP_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.environ.get('DATA_DIR', os.path.dirname(os.path.abspath(__file__)))
 
 def get_path(filename):
@@ -11,7 +11,7 @@ def get_path(filename):
 STATS_FILE = get_path("clown_stats.json")
 LAST_USED_FILE = get_path("last_used.json")
 MEMBERS_FILE = get_path("chat_members.json")
-PHRASES_FILE = get_path("phrases.json")
+PHRASES_FILE = os.path.join(APP_DIR, "phrases.json")
 GROUP_SETTINGS_FILE = get_path("group_settings.json")
 
 logger = logging.getLogger(__name__)
